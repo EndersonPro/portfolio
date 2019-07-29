@@ -1,7 +1,7 @@
 <template>
   <div class="card">
-    <div class="imgBx" v-bind:style="styleImg">
-      <img src="../assets/gir.jpg" alt />
+    <div class="imgBx">
+      <img :src="imagen" />
     </div>
     <input type="checkbox" name id />
     <div class="toggle">+</div>
@@ -23,20 +23,16 @@
 </template>
 <script>
 import { icons } from "../util/icons";
-import gir from "../assets/gir.jpg";
 
 export default {
   name: "ProjectComponent",
-  data() {
-    return {
-      styleImg: {
-        backgroundImage: gir
-      }
-    };
-  },
   props: {
     title: {
       type: String,
+      required: true
+    },
+    imagen: {
+    //   type: String,
       required: true
     },
     description: {
@@ -48,10 +44,20 @@ export default {
       required: true
     }
   },
+  computed:{
+      img: function(){
+          return require( this.imagen.toString());
+      }
+  },
   methods: {
     icon(name) {
       let iconName = name.toLowerCase();
       return icons[iconName];
+    },
+    getImg(rute) {
+      // import img from route;
+      console.log(rute);
+      return rute;
     }
   },
   filters: {
@@ -139,14 +145,6 @@ export default {
       h3 {
         color: white;
         margin-bottom: 0.5em;
-      }
-      p {
-        // width: 100px;
-        // width: 100%;
-        // max-width: 100%;
-        // white-space: nowrap;
-        // overflow: hidden;
-        // text-overflow: ellipsis;
       }
       .technologies {
         position: absolute;

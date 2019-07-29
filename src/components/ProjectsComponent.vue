@@ -3,24 +3,28 @@
     <div class="container">
       <ProjectComponent
         title="Gir Web"
+        :imagen="require('../assets/gir.jpg')"
         description="Es un proyecto realizado para la agencia JQAgencia. La web permite la gestión de recursos: Personal y equipos, programación de mantenimientos y notificaciones automática etc."
         :technologies="['PHP','Angular','Laravel', 'ngrx']"
       />
       <ProjectComponent
         title="Gir App"
+        :imagen="require('../assets/gir.jpg')"
         description="Es un proyecto realizado para la agencia JQAgencia. La aplicacion movil permite la gestión de recursos: Personal y equipos, programación de mantenimientos y notificaciones automática etc."
         :technologies="['ionic','ngrx','php','angular', 'laravel']"
         />
-      <ProjectComponent
+      <!-- <ProjectComponent
+        :imagen="require('../assets/gir.jpg')"
         title="titulo 3"
         description="breve descripcion que no debe ser muy larga para cada proyecto y asi ocupar buen espacio"
         :technologies="['react','LaRaVel']"
       />
       <ProjectComponent
+        :imagen="require('../assets/gir.jpg')"
         title="titulo 3"
         description="breve descripcion que no debe ser muy larga para cada proyecto y asi ocupar buen espacio"
         :technologies="['angular']"
-      />
+      /> -->
     </div>
   </div>
 </template>

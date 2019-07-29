@@ -6,8 +6,8 @@
     </div>
     <router-view/>-->
     <FirstComponent/>
-    <AboutMeComponent/>
-    <ProjectsComponent/>
+    <AboutMeComponent id="sobremi"/>
+    <ProjectsComponent id="trabajos"/>
 
     <footer>
         <p>

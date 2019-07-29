@@ -1,28 +1,28 @@
 <template>
     <div class="main-view">
       <div class="container">
-        <div class="nav">
+        <scrollactive class="nav">
           <li>
             <ul>
-              <a href="#">Sobre mi</a>
+              <a href="#sobremi" class="scrollactive-item">Sobre mi</a>
             </ul>
             <ul>
-              <a href="#">Trabajos</a>
+              <a href="#trabajos" class="scrollactive-item">Trabajos</a>
             </ul>
             <ul>
-              <a href="#">Contactame</a>
+              <a href="#contacto" class="scrollactive-item">Contactame</a>
             </ul>
           </li>
-        </div>
+        </scrollactive>
         <div class="greeting">
           <code>
             <span>&lt;head&gt;</span>Hey,todo bien?<span>&lt;/head&gt;</span></code>
           <p>Yo soy Enderson,</p>
           <p>un desarrollador web</p>
-          <div class="buttons">
-            <a href="#">Contactame</a>
-            <a href="#">Sobre Mi</a>
-          </div>
+          <scrollactive class="buttons">
+            <a href="#" class="scrollactive-item">Contactame</a>
+            <a href="#sobremi" class="scrollactive-item">Sobre Mi</a>
+          </scrollactive>
         </div>
       </div>
     </div>

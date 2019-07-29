@@ -13,17 +13,17 @@
       <p>Sigueme en:</p>
       <li>
         <ul>
-          <a href="#">
+          <a href="https://github.com/EndersonPro" target="_blank">
             <font-awesome-icon :icon="['fab','github']" />
           </a>
         </ul>
         <ul>
-          <a href="#">
+          <a href="https://gitlab.com/EndersonPro" target="_blank">
             <font-awesome-icon :icon="['fab','gitlab']" />
           </a>
         </ul>
         <ul>
-          <a href="#">
+          <a href="https://twitter.com/Endersonj_" target="_blank">
               <font-awesome-icon :icon="['fab','twitter']" />
           </a>
         </ul>
