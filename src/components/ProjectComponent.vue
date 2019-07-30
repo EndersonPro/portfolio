@@ -1,14 +1,20 @@
 <template>
   <div class="card">
     <div class="imgBx">
-      <img :src="imagen" />
+      <img v-if="imagen != null" :src="imagen" />
+      <p v-else> {{ title | capitalize }} </p>
     </div>
     <input type="checkbox" name id />
     <div class="toggle">+</div>
     <div class="content">
       <div class="text">
-        <h3>{{ title | capitalize }}</h3>
+        <h3>
+          <a target="_blank" :href="url">{{ title | capitalize }}</a>
+        </h3>
         <p>{{ description | capitalize }}</p>
+        <p>
+          <!-- <a class="btn-ref" href="#">Ver</a> -->
+        </p>
         <span class="technologies">
           <img
             :src="icon(technology)"
@@ -31,9 +37,13 @@ export default {
       type: String,
       required: true
     },
-    imagen: {
-    //   type: String,
+    url: {
+      type: String,
       required: true
+    },
+    imagen: {
+      //   type: String,
+      default: null
     },
     description: {
       type: String,
@@ -44,10 +54,10 @@ export default {
       required: true
     }
   },
-  computed:{
-      img: function(){
-          return require( this.imagen.toString());
-      }
+  computed: {
+    img: function() {
+      return require(this.imagen.toString());
+    }
   },
   methods: {
     icon(name) {
@@ -75,6 +85,14 @@ export default {
   }
 }
 
+.btn-ref {
+  text-decoration: none;
+  color: white;
+  padding: 0.15em;
+  width: 50px;
+  background-color: #3c5a33;
+}
+
 .card {
   position: relative;
   width: 100%;
@@ -87,6 +105,13 @@ export default {
     height: 100%;
     // height: auto;
     z-index: -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p{
+      font-size: 35px;
+    }
     img {
       width: 100%;
       height: 100%;
@@ -143,7 +168,12 @@ export default {
     .text {
       //   position: relative;
       h3 {
-        color: white;
+        cursor: pointer !important;
+        z-index: 99;
+        a {
+          color: white;
+        }
+       
         margin-bottom: 0.5em;
       }
       .technologies {

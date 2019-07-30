@@ -1,0 +1,43 @@
+[
+  {
+    "title": "Gir Web",
+    "imagen": "gir.jpg",
+    "url": "http://girsoftware.com/",
+    "description": "Es un proyecto realizado para la agencia JQAgencia. La web permite la gestión de recursos: Personal y equipos, programación de mantenimientos y notificaciones automática etc.",
+    "technologies": ["PHP", "Angular", "Laravel", "ngrx"]
+  },
+  {
+    "title": "Taxi Precio SM",
+    "url": "https://play.google.com/store/apps/details?id=caldistancia.pro.joralmo",
+    "imagen": "taxiapp.png",
+    "description": "Taxi Precio Santa Marta es una app en la que podrás calcular la tarifa que debes cancelar al taxi por la ruta que decidas tomar.",
+    "technologies": ["ionic", "angular"]
+  },
+  {
+    "title": "Gir App",
+    "url": "http://girsoftware.com/",
+    "imagen": "gir.jpg",
+    "description": "Es un proyecto realizado para la agencia JQAgencia. La aplicacion movil permite la gestión de recursos: Personal y equipos, programación de mantenimientos y notificaciones automática etc.",
+    "technologies": ["ionic", "ngrx", "php", "angular", "laravel"]
+  },
+  {
+    "title": "Movilneth",
+    "url": "https://www.mylogitime.com/",
+    "description": "Aplicación web diseñada para la venta de productos, tales como cuentas de Netflix y artículos varios, con manejo de roles y permisos para cada usuario que inicia sesión.",
+    "technologies": ["react", "redux"]
+  },
+  {
+    "title": "UNEESMAG",
+    "imagen": "unnes.png",
+    "url": "https://play.google.com/store/apps/details?id=unees.magdalena.app",
+    "description": "Esta es la primera versión de UNEESMAG, la app diseñada para mantenerte informado sobre todo lo que pasa en el paro nacional.",
+    "technologies": ["ionic", "angular"]
+  },
+  {
+    "title": "Calcula promedio",
+    "imagen": "calprome.png",
+    "url": "https://play.google.com/store/apps/details?id=calcularPromedio.pro.joralmo",
+    "description": "Con esta aplicación podrás calcular tu promedio semestral y ver como va tu promedio ponderado solamente agregando tus materias por semestre.",
+    "technologies": ["ionic", "angular"]
+  }
+]

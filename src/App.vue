@@ -5,31 +5,49 @@
       <router-link to="/about">About</router-link>
     </div>
     <router-view/>-->
-    <FirstComponent/>
-    <AboutMeComponent id="sobremi"/>
-    <ProjectsComponent id="trabajos"/>
+    <FirstComponent />
+    <AboutMeComponent id="sobremi" />
+    <ProjectsComponent id="trabajos" />
 
     <footer>
-        <p>
-          Enderson Vizcaino
-        </p>
+      <p>Enderson Vizcaino</p>
+      <p>
+        <a href="mailto:enjaviga@gmail.com">enjaviga@gmail.com</a>
+      </p>
+      <div>
+        <li>
+          <ul>
+            <a href="https://github.com/EndersonPro" target="_blank">
+              <font-awesome-icon :icon="['fab','github']" />
+            </a>
+          </ul>
+          <ul>
+            <a href="https://gitlab.com/EndersonPro" target="_blank">
+              <font-awesome-icon :icon="['fab','gitlab']" />
+            </a>
+          </ul>
+          <ul>
+            <a href="https://twitter.com/Endersonj_" target="_blank">
+              <font-awesome-icon :icon="['fab','twitter']" />
+            </a>
+          </ul>
+        </li>
+      </div>
     </footer>
   </div>
 </template>
 <script>
- import FirstComponent from '@/components/FirstComponent'
- import AboutMeComponent from '@/components/AboutMeComponent'
- import ProjectsComponent from '@/components/ProjectsComponent'
-
-
+import FirstComponent from "@/components/FirstComponent";
+import AboutMeComponent from "@/components/AboutMeComponent";
+import ProjectsComponent from "@/components/ProjectsComponent";
 
 export default {
-  components:{
+  components: {
     FirstComponent,
     AboutMeComponent,
     ProjectsComponent
   }
-}
+};
 </script>
 
 
@@ -49,17 +67,51 @@ export default {
   box-sizing: border-box;
 }
 
-footer{
-  padding: .5em;
+footer {
+  padding: 0.1em;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  background-color:#0B0B0D;
-  color: rgba(255,255,255,.8);
+  background-color: #0b0b0d;
+  color: rgba(255, 255, 255, 0.8);
+
+  p {
+    a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+    }
+    &:nth-child(1) {
+      padding-left: 1.8em;
+    }
+  }
+
+  li {
+    display: flex;
+    padding: {
+      left: 1em;
+    }
+    // width: 30%;
+    // background-color: red;
+    // justify-content: space-between;
+    ul {
+      a {
+        font-size: 25px;
+        margin-right: 1em;
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
+  }
 }
 
-
-
+@media (max-width: 525px) {
+  footer {
+    justify-content: center;
+    li,
+    p:nth-child(2) {
+      display: none;
+    }
+  }
+}
 
 #app {
   font-family: "Montserrat", sans-serif;

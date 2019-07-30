@@ -2,37 +2,31 @@
   <div class="projects">
     <div class="container">
       <ProjectComponent
-        title="Gir Web"
-        :imagen="require('../assets/gir.jpg')"
-        description="Es un proyecto realizado para la agencia JQAgencia. La web permite la gestión de recursos: Personal y equipos, programación de mantenimientos y notificaciones automática etc."
-        :technologies="['PHP','Angular','Laravel', 'ngrx']"
+        :key="i"
+        v-for="(project, i) in projects"
+        :title="project.title"
+        :url="project.url"
+        :imagen="project.imagen != null ? require(`../assets/${project.imagen}`) : null"
+        :description="project.description"
+        :technologies="project.technologies"
       />
-      <ProjectComponent
-        title="Gir App"
-        :imagen="require('../assets/gir.jpg')"
-        description="Es un proyecto realizado para la agencia JQAgencia. La aplicacion movil permite la gestión de recursos: Personal y equipos, programación de mantenimientos y notificaciones automática etc."
-        :technologies="['ionic','ngrx','php','angular', 'laravel']"
-        />
-      <!-- <ProjectComponent
-        :imagen="require('../assets/gir.jpg')"
-        title="titulo 3"
-        description="breve descripcion que no debe ser muy larga para cada proyecto y asi ocupar buen espacio"
-        :technologies="['react','LaRaVel']"
-      />
-      <ProjectComponent
-        :imagen="require('../assets/gir.jpg')"
-        title="titulo 3"
-        description="breve descripcion que no debe ser muy larga para cada proyecto y asi ocupar buen espacio"
-        :technologies="['angular']"
-      /> -->
     </div>
   </div>
 </template>
 <script>
 import ProjectComponent from "./ProjectComponent";
+import projectsJson from "../util/projects.json";
 
 export default {
   name: "projects",
+  data() {
+    return {
+      projects: []
+    };
+  },
+  mounted() {
+    this.projects = projectsJson;
+  },
   components: {
     ProjectComponent
   }

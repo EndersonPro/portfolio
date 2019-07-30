@@ -1,7 +1,7 @@
 <template>
   <div class="about-me">
     <div class="description">
-      <p>Soy un desarrollador web y de aplicaciones moviles autodidacta de 21 años, vivo en Ciénaga, Magdalena Colombia.</p>
+      <p>Soy un desarrollador web y de aplicaciones moviles autodidacta de 21 años, vivo en Ciénaga Magdalena, Colombia.</p>
       <br />
       <p>He trabajado con algunas agencias y algunas personas a lo largo de este tiempo que me he desempeñado como Freelancer.</p>
       <br />
